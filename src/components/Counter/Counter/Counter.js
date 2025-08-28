@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Title } from 'components/Counter/Title/Title';
 import { Controls } from 'components/Counter/Controls/Controls';
 import { Value } from 'components/Counter/Value/Value';
 import { CounterContainer } from 'components/Counter/Counter/Counter.styled';
@@ -30,9 +31,12 @@ export default class Counter extends Component {
   };
 
   render() {
+    const { value } = this.state;
+
     return (
       <CounterContainer>
-        <Value value={this.state.value} />
+        <Title text={'Счетчик'} />
+        <Value value={value} />
 
         <Controls
           onDecrement={this.handleDecrement}

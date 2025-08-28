@@ -5,5 +5,5 @@ import { ValueEl } from 'components/Counter/Value/Value.styled';
 export const Value = ({ value }) => <ValueEl>{value}</ValueEl>;
 
 Value.propTypes = {
-  value: PropTypes.func.isRequired,
+  value: PropTypes.number.isRequired,
 };

@@ -13,19 +13,20 @@ export default class Dropdown extends Component {
   };
 
   render() {
+    const { visible } = this.state;
+
     return (
       <Container>
+        <h2>Выпадающее меню</h2>
         <button
           type="button"
           className="Dropdown__toggle"
           onClick={this.toggle}
         >
-          {this.state.visible ? 'Скрыть' : 'Показать'}
+          {visible ? 'Скрыть' : 'Показать'}
         </button>
 
-        {this.state.visible && (
-          <div className="Dropdown__menu">Выпадающее меню</div>
-        )}
+        {visible && <div className="Dropdown__menu">Выпадающее меню</div>}
       </Container>
     );
   }

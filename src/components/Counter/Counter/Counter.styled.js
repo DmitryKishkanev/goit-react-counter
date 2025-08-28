@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const CounterContainer = styled.div`
+export const CounterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,9 @@ const CounterContainer = styled.div`
   margin-bottom: 50px;
   padding: 15px;
 
-  border: 1px solid black;
-`;
+  background-color: #cde2eb;
+  border-radius: 5px;
 
-export { CounterContainer };
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+`;
